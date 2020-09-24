@@ -5,11 +5,22 @@ import configureStore from './store/configureStore.js';
 import { Provider } from 'react-redux';
 import App from './App.js';
 import { addTodo } from './actions/todos';
+import uuid from 'react-uuid';
 
 const store = configureStore();
 
-store.dispatch(addTodo('First todo'));
-store.dispatch(addTodo('Second todo'));
+store.dispatch(
+  addTodo({
+    text: 'First todo',
+    id: uuid(),
+  })
+);
+store.dispatch(
+  addTodo({
+    text: 'Second todo',
+    id: uuid(),
+  })
+);
 const state = store.getState();
 console.log(state);
 

@@ -10,10 +10,12 @@ const App = () => {
   const initialState = ['a', 'b', 'c'];
 
   return (
-    <div>
-      <Header />
-      <AddForm />
-      <List />
+    <div className='container-fluid d-flex justify-content-center'>
+      <div className='col-sm-8 '>
+        <Header />
+        <AddForm />
+        <List />
+      </div>
     </div>
   );
 };
