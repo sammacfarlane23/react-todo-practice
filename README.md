@@ -1,5 +1,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Todo List Practice App
+
+This todo list was built to try and utilise Bootstrap, Redux Forms and Jest
+
+Live demo [here](https://sammacfarlane23.github.io/react-todo-practice/)
+
 ## Available Scripts
 
 In the project directory, you can run:
