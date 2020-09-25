@@ -8,14 +8,15 @@ const Item = (props) => {
   };
 
   return (
-    <div
-      className='card col-12 p-0 my-3'
-      style={{ border: 'none', background: '#eee' }}
-    >
+    <div className='card col-sm-10 col-10 p-1 my-3 item'>
       <div className='card-body py-1'>
-        <div className='row d-flex justify-content-between'>
-          <p className='font-weight-bold col-8'>{props.todo.text}</p>
-          <button onClick={onRemoveClick} className='btn btn-danger m-2'>
+        <div className='row d-flex justify-content-between align-items-start'>
+          <label className='checkbox-container col-2'>
+            <input type='checkbox' />
+            <span className='checkmark'></span>
+          </label>
+          <p className='font-weight-bold col-6'>{props.todo.text}</p>
+          <button onClick={onRemoveClick} className='btn btn-danger'>
             Delete
           </button>
         </div>

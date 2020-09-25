@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
+import uuid from 'react-uuid';
 import configureStore from './store/configureStore';
 import { Provider } from 'react-redux';
 import App from './App';
 import { addTodo } from './actions/todos';
-import uuid from 'react-uuid';
+import './styles/styles.scss';
 
 const store = configureStore();
 

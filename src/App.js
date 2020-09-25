@@ -16,8 +16,8 @@ const App = (props) => {
   };
 
   return (
-    <div className='container-fluid d-flex justify-content-center'>
-      <div className='col-sm-8 '>
+    <div className='container-fluid'>
+      <div className='main-content'>
         <Header />
         <AddForm onSubmit={submit} />
         <List />

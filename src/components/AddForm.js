@@ -4,7 +4,7 @@ import { Field, reduxForm } from 'redux-form';
 let AddForm = (props) => {
   const { handleSubmit, pristine, submitting } = props;
   return (
-    <form onSubmit={handleSubmit}>
+    <form className='form m-4' onSubmit={handleSubmit}>
       <div className='col d-flex flex-column align-items-center justify-content-center m-0'>
         <div className='form-group'>
           <Field
@@ -16,7 +16,7 @@ let AddForm = (props) => {
         </div>
         <button
           disabled={pristine || submitting}
-          className='btn btn-primary ml-2'
+          className='btn btn-primary'
           style={{ height: '38px' }}
         >
           Add
