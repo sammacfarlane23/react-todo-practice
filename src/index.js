@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
-import configureStore from './store/configureStore.js';
+import configureStore from './store/configureStore';
 import { Provider } from 'react-redux';
-import App from './App.js';
+import App from './App';
 import { addTodo } from './actions/todos';
 import uuid from 'react-uuid';
 
@@ -21,8 +21,6 @@ store.dispatch(
     id: uuid(),
   })
 );
-const state = store.getState();
-console.log(state);
 
 ReactDOM.render(
   <React.StrictMode>
