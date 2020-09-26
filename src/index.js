@@ -1,27 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
-import uuid from 'react-uuid';
 import configureStore from './store/configureStore';
 import { Provider } from 'react-redux';
+import axios from 'axios';
 import App from './App';
 import { addTodo } from './actions/todos';
 import './styles/styles.scss';
 
 const store = configureStore();
 
-store.dispatch(
-  addTodo({
-    text: 'First todo',
-    id: uuid(),
-  })
-);
-store.dispatch(
-  addTodo({
-    text: 'Second todo',
-    id: uuid(),
-  })
-);
+axios.get('https://jsonplaceholder.typicode.com/users/1/todos').then((res) => {
+  res.data.forEach((todo) => {
+    if (todo.id < 4) {
+      store.dispatch(
+        addTodo({
+          text: todo.title,
+          id: todo.id,
+        })
+      );
+    }
+  });
+});
 
 ReactDOM.render(
   <React.StrictMode>
