@@ -8,8 +8,8 @@ const Item = (props) => {
   };
 
   return (
-    <div className='card col-sm-10 col-10 p-1 my-3 item'>
-      <div className='card-body py-1 row d-flex justify-content-between'>
+    <div className='card col-sm-10 item'>
+      <div className='card-body row d-flex justify-content-between'>
         <label className='checkbox-container'>
           <input type='checkbox' name='todo-checkbox' />
           <span className='checkmark'></span>

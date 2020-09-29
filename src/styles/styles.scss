@@ -32,8 +32,13 @@ body {
   @media (min-width: 960px) {
     max-width: 60rem;
   }
-  height: 4rem;
-  border-bottom: 1px solid #ccc;
+}
+
+.card-body {
+  max-height: 4rem;
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem;
+  margin: 1rem 0;
 }
 
 .item p {
@@ -80,7 +85,7 @@ body {
 
 /* On mouse-over, add a grey background color */
 .checkbox-container:hover input ~ .checkmark {
-  background-color: #fff;
+  background-color: #ccc;
   border: 1px solid #007bff;
 }
 
